@@ -1,0 +1,90 @@
+.about {
+  .container {
+    .row {
+      .col-lg-6 {
+        .power-left {
+          h2 {
+            font-size: 48px;
+            font-weight: 700 !important;
+            color: $color-one;
+            padding-right: 80px;
+            span {
+              color: $primary-color;
+            }
+          }
+
+          .skillexperience {
+            margin-top: 108px;
+          }
+        }
+        .power-right {
+          p {
+            padding-right: 150px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            color: $footer-color;
+            &:after {
+              position: absolute;
+              content: "";
+              width: 3px;
+              height: 80px;
+              top: 5px;
+              left: 0px;
+              border-radius: 20px;
+              background-color: #6344c6;
+            }
+          }
+
+          button {
+            font-size: 20px;
+            font-weight: 700;
+            color: $color-white;
+            padding: 18px 32px;
+            margin-left: 15px;
+            margin-top: 23px;
+            border-color: transparent;
+            border-radius: 8px;
+            background-color: $primary-color;
+          }
+        }
+
+        .rewards {
+          margin-top: 64px;
+          h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: $color-one;
+            padding-right: 280px;
+          }
+
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            color: $footer-color;
+            margin-bottom: 40px;
+            padding-right: 200px;
+          }
+
+          button {
+            font-size: 20px;
+            font-weight: 700;
+            color: $color-four;
+            background-color: transparent;
+            border: 1px solid $color-four;
+            padding: 18px 32px;
+            border-radius: 8px;
+            transition: all linear 0.3s;
+            &:hover {
+              background-color: $color-four;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
