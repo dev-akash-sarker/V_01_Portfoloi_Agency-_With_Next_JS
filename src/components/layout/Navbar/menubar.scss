@@ -1,0 +1,26 @@
+.navbar {
+  background-color: transparent !important;
+  .container {
+    padding-top: 41px;
+    padding-bottom: 49px;
+  }
+
+  a {
+    color: $color-one;
+    font-size: 18px;
+    font-weight: 500;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  button {
+    background-color: $primary-color !important;
+    color: $color-white !important;
+    padding: 15px 29px;
+    font-weight: 700;
+    outline: none;
+    border-color: transparent;
+    border-radius: 15px;
+  }
+}
