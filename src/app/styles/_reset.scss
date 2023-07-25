@@ -20,3 +20,29 @@ h6,
 p {
   line-height: 0.8;
 }
+
+.natto-primary-button {
+  font-size: 20px;
+  font-weight: 700;
+  color: $color-white;
+  background-color: $primary-color;
+  padding: 18px 32px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.natto-secondary-button {
+  font-size: 20px;
+  font-weight: 700;
+  color: $color-four;
+  background-color: transparent;
+  border: 1px solid $color-four;
+  padding: 18px 32px;
+  border-radius: 8px;
+  transition: all linear 0.3s;
+  &:hover {
+    background-color: $color-four;
+    color: #fff;
+  }
+}

@@ -1,10 +1,27 @@
+"use client";
 import React from "react";
 import { DM_Sans } from "next/font/google";
 import Skillset from "./Skillset/Skillset";
+import { motion } from "framer-motion";
 const dmsans = DM_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 export default function About() {
+  const Animation = {
+    hidden: {
+      y: 50,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
-    <div className="about">
+    <motion.div
+      className="about"
+      initial="hidden"
+      whileInView="visible"
+      variants={Animation}
+    >
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -32,11 +49,22 @@ export default function About() {
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority.
               </p>
-              <button>Visit Now</button>
+              <motion.button
+                initial={{ opacity: 0.6 }}
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 1 },
+                }}
+                whileTap={{ scale: 0.9 }}
+                whileInView={{ opacity: 1 }}
+                className="natto-secondary-button"
+              >
+                Visit Now
+              </motion.button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
