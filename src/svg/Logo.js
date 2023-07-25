@@ -3,13 +3,7 @@ import React from "react";
 export default function Logo() {
   return (
     <>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="108"
-        height="32"
-        viewBox="0 0 108 32"
-        fill="none"
-      >
+      <svg width="108" height="32" viewBox="0 0 108 32" fill="none">
         <circle cx="99" cy="9" r="9" fill="#6344C6" />
         <path
           fill-rule="evenodd"
