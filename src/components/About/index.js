@@ -15,6 +15,16 @@ export default function About() {
       opacity: 1,
     },
   };
+  const Animation2 = {
+    hidden: {
+      x: 20,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
   return (
     <motion.div
       className="about"
@@ -34,7 +44,12 @@ export default function About() {
               <Skillset />
             </div>
           </div>
-          <div className="col-lg-6">
+          <motion.div
+            className="col-lg-6"
+            initial="hidden"
+            whileInView="visible"
+            variants={Animation2}
+          >
             <div className="power-right">
               <p className={dmsans.className}>
                 There are many variations of passages of Lorem Ipsum available,
@@ -62,7 +77,7 @@ export default function About() {
                 Visit Now
               </motion.button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </motion.div>

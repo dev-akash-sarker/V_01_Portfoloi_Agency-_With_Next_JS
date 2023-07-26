@@ -4,7 +4,7 @@ import React from "react";
 import glassman from "../../app/Images/glassman.webp";
 import { DM_Sans, Grechen_Fuemen } from "next/font/google";
 import { motion } from "framer-motion";
-import Counter from "react-number-increment";
+import CountUp from "react-countup";
 const dmsans = DM_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 const grechen = Grechen_Fuemen({ subsets: ["latin"], weight: ["400"] });
 export default function Team() {
@@ -56,15 +56,15 @@ export default function Team() {
 
               <div className="number-team">
                 <div className={grechen.className + " " + "team-section"}>
-                  <Counter start={0} end={30} speed={1} />
+                  <CountUp end={30} suffix=" +" />
                   <p className={dmsans.className}>Team Members</p>
                 </div>
                 <div className={grechen.className + " " + "team-section"}>
-                  <Counter start={0} end={150} speed={1} />
+                  <CountUp end={150} suffix=" +" />
                   <p className={dmsans.className}>Completed Projects</p>
                 </div>
                 <div className={grechen.className + " " + "team-section"}>
-                  <Counter start={0} end={50} speed={1} />
+                  <CountUp end={50} suffix=" +" />
                   <p className={dmsans.className}>Satisfied Clients</p>
                 </div>
               </div>
