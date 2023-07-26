@@ -1,0 +1,41 @@
+.partner {
+  .container {
+    .row {
+      .col-lg-8 {
+        text-align: center;
+        margin: 0 auto;
+        h4 {
+          font-size: 48px;
+          font-weight: 700;
+          color: $color-one-pro;
+          text-align: center;
+          line-height: auto;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+.partner {
+  .container {
+    .row {
+      gap: 20px;
+      .col-lg-3 {
+        width: 23%;
+        border: 1px solid #d8d2ec;
+        padding: 40px 22px;
+        text-align: center;
+        h4 {
+          font-size: 32px;
+          font-weight: 700;
+          color: $color-one;
+          text-align: center;
+          line-height: auto;
+          padding: 20px 0;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}
