@@ -63,7 +63,7 @@ export default function Footer() {
                 <Form.Control
                   type="search"
                   placeholder="email"
-                  className="me-2"
+                  className={dmsans.className + " " + "me-2"}
                   aria-label="Search"
                 />
                 <Button variant="outline-success">
