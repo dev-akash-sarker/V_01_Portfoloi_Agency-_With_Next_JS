@@ -1,5 +1,8 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { DM_Sans, Open_Sans } from "next/font/google";
+const dmsans = DM_Sans({ subsets: ["latin"], weight: ["400", "700"] });
+const opensans = Open_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 export default function Newsletter() {
   return (
     <>
@@ -9,15 +12,21 @@ export default function Newsletter() {
             <div className="col-lg-12">
               <div className="newsletter-wrapper">
                 <div className="newsletter-text">
-                  <h4>Subscirbe to Our Newsletter</h4>
-                  <p>
+                  <h4 className={dmsans.className}>
+                    Subscirbe to Our Newsletter
+                  </h4>
+                  <p className={opensans.className}>
                     There are many variations of passages of Lorem Ipsum
                     available, but the majority.
                   </p>
                 </div>
                 <div className="newsletter-email">
                   <div className="newsletter-email-wrapper">
-                    <input type="text" />
+                    <input
+                      className={dmsans.className}
+                      type="text"
+                      placeholder="Email"
+                    />
                     <button>
                       <BsArrowRight />
                     </button>
