@@ -8,17 +8,28 @@ import Team from "@/components/Team/Team";
 import Blog from "@/components/Blog/Blog";
 import Partner from "@/components/Partner/Partner";
 import Newsletter from "@/components/Newsletter/Newsletter";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export default function Home() {
   return (
     <>
       <Layout>
+        {/* hero */}
         <Hero />
+        {/* about */}
         <About />
+        {/* production */}
         <Production />
+        {/* team */}
         <Team />
+        {/* blog */}
         <Blog />
+        {/* partner */}
         <Partner />
+        {/* newsletter */}
         <Newsletter />
+        {/* footer */}
       </Layout>
     </>
   );

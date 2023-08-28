@@ -18,29 +18,37 @@ export default function Partner() {
             </div>
           </div>
           <div className={jostf.className + " " + "row"}>
-            <div className="col-lg-3">
-              <div className="partner-image">
-                <Image src={partnerone} alt="partnerone" />
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <div className="partner-wrapper">
+                <div className="partner-image">
+                  <Image src={partnerone} alt="partnerone" />
+                </div>
+                <h4>Happy Mart</h4>
               </div>
-              <h4>Happy Mart</h4>
             </div>
-            <div className="col-lg-3">
-              <div className="partner-image">
-                <Image src={partnertwo} alt="partnerone" />
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <div className="partner-wrapper">
+                <div className="partner-image">
+                  <Image src={partnertwo} alt="partnerone" />
+                </div>
+                <h4>Lori Cracker</h4>
               </div>
-              <h4>Lori Cracker</h4>
             </div>
-            <div className="col-lg-3">
-              <div className="partner-image">
-                <Image src={partnerthree} alt="partnerone" />
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <div className="partner-wrapper">
+                <div className="partner-image">
+                  <Image src={partnerthree} alt="partnerone" />
+                </div>
+                <h4>Emad Fashion</h4>
               </div>
-              <h4>Emad Fashion</h4>
             </div>
-            <div className="col-lg-3">
-              <div className="partner-image">
-                <Image src={partnerfour} alt="partnerone" />
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <div className="partner-wrapper">
+                <div className="partner-image">
+                  <Image src={partnerfour} alt="partnerone" />
+                </div>
+                <h4>Docco Semims</h4>
               </div>
-              <h4>Docco Semims</h4>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 .newsletter {
   margin-top: 128px;
   margin-bottom: 103px;
+
   .container {
     background-color: $color-four;
     padding: 50px;
@@ -8,9 +9,15 @@
     .row {
       .col-lg-12 {
         .newsletter-wrapper {
-          display: flex;
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          @include media-breakpoint-down(lg) {
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+
           .newsletter-text {
-            width: 50%;
             // here is text design
             h4 {
               width: 405px;
@@ -31,17 +38,24 @@
 
           .newsletter-email {
             position: relative;
-            width: 50%;
+
             .newsletter-email-wrapper {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
+              position: relative;
               input {
                 width: 434px;
                 padding: 14px 20px;
                 border-radius: 8px;
+                margin: auto 0;
                 outline: none;
+                @include media-breakpoint-down(xl) {
+                  width: 400px;
+                }
+                @include media-breakpoint-down(lg) {
+                  width: 410px;
+                }
+                // @include media-breakpoint-down(xs) {
+                //   width: 300px;
+                // }
                 &:focus {
                   outline: none;
                 }
@@ -49,7 +63,7 @@
               button {
                 position: absolute;
                 top: 4px;
-                right: 5px;
+                right: 4px;
                 color: $color-white;
                 background-color: $color-four;
                 font-weight: 700;

@@ -1,20 +1,20 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import wd from "../../svg/production-icons/wd.svg";
-import pd from "../../svg/production-icons/pd.svg";
-import gd from "../../svg/production-icons/gd.svg";
 import { DM_Sans, Open_Sans } from "next/font/google";
 import { motion } from "framer-motion";
+import Gd from "@/svg/production-icons/Gd";
+import Pd from "@/svg/production-icons/Pd";
+import Wd from "@/svg/production-icons/Wd";
 const dmsans = DM_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 const opensans = Open_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 export default function ProdRight() {
   return (
     <>
       <div className="prodWrapper">
-        <motion.div whileHover={{ x: 48 }} className="prodflex">
+        <div className="prodflex">
           <div className="icon">
-            <Image src={wd} width={64} height={64} alt="wd" />
+            <Wd />
           </div>
           <div className={dmsans.className + " " + "text-prod"}>
             <h4>Web Development</h4>
@@ -23,10 +23,10 @@ export default function ProdRight() {
               but the majority.
             </p>
           </div>
-        </motion.div>
-        <motion.div whileHover={{ x: 48 }} className="prodflex">
+        </div>
+        <div className="prodflex">
           <div className="icon">
-            <Image src={pd} width={64} height={64} alt="wd" />
+            <Pd />
           </div>
           <div className={dmsans.className + " " + "text-prod"}>
             <h4>Product Design & Development</h4>
@@ -35,10 +35,10 @@ export default function ProdRight() {
               but the majority.
             </p>
           </div>
-        </motion.div>
-        <motion.div whileHover={{ x: 48 }} className="prodflex">
+        </div>
+        <div whileHover={{ x: 48 }} className="prodflex">
           <div className="icon">
-            <Image src={gd} width={64} height={64} alt="wd" />
+            <Gd />
           </div>
           <div className={dmsans.className + " " + "text-prod"}>
             <h4>Graphic Design</h4>
@@ -47,7 +47,7 @@ export default function ProdRight() {
               but the majority.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </>
   );

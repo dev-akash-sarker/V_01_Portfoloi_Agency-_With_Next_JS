@@ -32,6 +32,10 @@ p {
   margin-top: 40px;
 }
 
+body {
+  box-sizing: border-box;
+}
+
 .natto-secondary-button {
   font-size: 20px;
   font-weight: 700;

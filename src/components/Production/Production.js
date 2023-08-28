@@ -6,7 +6,7 @@ import ProdRight from "./ProdRight";
 export default function Production() {
   return (
     <>
-      <div>
+      <div className="productionsplus">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
