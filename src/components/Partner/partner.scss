@@ -11,6 +11,9 @@
           text-align: center;
           line-height: auto;
           margin-bottom: 40px;
+          @include media-breakpoint-down(xs) {
+            font-size: 40px;
+          }
         }
       }
     }
@@ -20,12 +23,16 @@
 .partner {
   .container {
     .row {
-      gap: 20px;
-      .col-lg-3 {
-        width: 23%;
-        border: 1px solid #d8d2ec;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .partner-wrapper {
+        border: 1px solid transparent;
         padding: 40px 22px;
         text-align: center;
+        @include media-breakpoint-down(xs) {
+          width: 100%;
+        }
         h4 {
           font-size: 32px;
           font-weight: 700;
@@ -34,6 +41,11 @@
           line-height: auto;
           padding: 20px 0;
           padding-top: 0;
+          margin-top: 10px;
+          @include media-breakpoint-down(xl) {
+            font-size: 25px;
+            margin-top: 10px;
+          }
         }
       }
     }

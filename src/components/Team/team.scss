@@ -2,6 +2,19 @@
   position: relative;
   width: 496px;
   height: 569px;
+  @include media-breakpoint-down(md) {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    width: 400px;
+    height: auto;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 350px;
+    height: auto;
+  }
+
   margin-bottom: 226px;
   img {
     width: 100%;
@@ -17,6 +30,20 @@
     background-color: #6344c6;
     border: 15px solid #fff;
     border-top-right-radius: 100px;
+    @include media-breakpoint-down(sm) {
+      border-radius: 0;
+      width: 100%;
+      border: none;
+      top: 250px;
+      left: 0px;
+    }
+    @include media-breakpoint-down(md) {
+      border-radius: 0;
+      width: 100%;
+      border: none;
+      top: 300px;
+      left: 0px;
+    }
     .center-teamwork {
       position: absolute;
       top: 50%;
@@ -41,6 +68,14 @@
 }
 
 .team-right {
+  @include media-breakpoint-down(md) {
+    margin-top: 150px;
+    text-align: center;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 200px;
+    text-align: center;
+  }
   h3 {
     font-size: 40px;
     font-weight: 700;
@@ -72,6 +107,9 @@
       font-weight: 700;
       line-height: 26px;
       color: $footer-color;
+      @include media-breakpoint-down(xs) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -79,6 +117,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    @include media-breakpoint-down(xs) {
+      display: block;
+    }
     .team-section {
       text-align: center;
       span {

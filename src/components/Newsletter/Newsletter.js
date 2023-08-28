@@ -22,11 +22,13 @@ export default function Newsletter() {
                 </div>
                 <div className="newsletter-email">
                   <div className="newsletter-email-wrapper">
-                    <input
-                      className={dmsans.className}
-                      type="text"
-                      placeholder="Email"
-                    />
+                    <div className="inputwrapper">
+                      <input
+                        className={dmsans.className}
+                        type="text"
+                        placeholder="Email"
+                      />
+                    </div>
                     <button>
                       <BsArrowRight />
                     </button>

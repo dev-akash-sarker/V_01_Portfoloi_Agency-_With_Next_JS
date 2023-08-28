@@ -9,7 +9,7 @@ const dmsans = DM_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 const grechen = Grechen_Fuemen({ subsets: ["latin"], weight: ["400"] });
 export default function Team() {
   return (
-    <div>
+    <div className="teams">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -56,15 +56,15 @@ export default function Team() {
 
               <div className="number-team">
                 <div className={grechen.className + " " + "team-section"}>
-                  <CountUp end={30} suffix=" +" />
+                  <CountUp end={30} enableScrollSpy={true} suffix=" +" />
                   <p className={dmsans.className}>Team Members</p>
                 </div>
                 <div className={grechen.className + " " + "team-section"}>
-                  <CountUp end={150} suffix=" +" />
+                  <CountUp end={150} enableScrollSpy={true} />
                   <p className={dmsans.className}>Completed Projects</p>
                 </div>
                 <div className={grechen.className + " " + "team-section"}>
-                  <CountUp end={50} suffix=" +" />
+                  <CountUp end={50} enableScrollSpy={true} suffix=" +" />
                   <p className={dmsans.className}>Satisfied Clients</p>
                 </div>
               </div>

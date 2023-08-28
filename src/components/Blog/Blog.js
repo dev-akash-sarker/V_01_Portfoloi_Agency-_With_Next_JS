@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { DM_Sans } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,8 +8,44 @@ import two from "../../app/Images/Blog/2.webp";
 import three from "../../app/Images/Blog/3.webp";
 import calender from "../../svg/calender.svg";
 import Link from "next/link";
+import Slider from "react-slick";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 const dmsans = DM_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 export default function Blog() {
+  const setting = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <AiOutlineArrowRight fill="#000" />,
+    prevArrow: <AiOutlineArrowLeft fill="#000" />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <>
       <div className="blog">
@@ -24,54 +61,72 @@ export default function Blog() {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-4">
-              <div className="blog-post-design">
-                <div className="blog-image">
-                  <Image src={one} alt="bitcoin" />
-                </div>
-                <div className="blog-text">
-                  <div className="blog-time">
-                    <Image src={calender} alt="calender" />
-                    <p> 10 January 2023</p>
+            <Slider {...setting}>
+              <div>
+                <div className="blog-post-design">
+                  <div className="blog-image">
+                    <Image src={one} alt="bitcoin" />
                   </div>
+                  <div className="blog-text">
+                    <div className="blog-time">
+                      <Image src={calender} alt="calender" />
+                      <p> 10 January 2023</p>
+                    </div>
 
-                  <h4>Bitcoin and Economic Freedom</h4>
-                  <Link href="#">Read More</Link>
+                    <h4>Bitcoin and Economic Freedom</h4>
+                    <Link href="#">Read More</Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="blog-post-design">
-                <div className="blog-image">
-                  <Image src={two} alt="bitcoin" />
-                </div>
-                <div className="blog-text">
-                  <div className="blog-time">
-                    <Image src={calender} alt="calender" />
-                    <p> 10 January 2023</p>
+              <div>
+                <div className="blog-post-design">
+                  <div className="blog-image">
+                    <Image src={two} alt="bitcoin" />
                   </div>
+                  <div className="blog-text">
+                    <div className="blog-time">
+                      <Image src={calender} alt="calender" />
+                      <p> 10 January 2023</p>
+                    </div>
 
-                  <h4>Bitcoin and Economic Freedom</h4>
-                  <Link href="#">Read More</Link>
+                    <h4>Bitcoin and Economic Freedom</h4>
+                    <Link href="#">Read More</Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="blog-post-design">
-                <div className="blog-image">
-                  <Image src={three} alt="bitcoin" />
-                </div>
-                <div className="blog-text">
-                  <div className="blog-time">
-                    <Image src={calender} alt="calender" />
-                    <p> 10 January 2023</p>
+              <div>
+                <div className="blog-post-design">
+                  <div className="blog-image">
+                    <Image src={three} alt="bitcoin" />
                   </div>
+                  <div className="blog-text">
+                    <div className="blog-time">
+                      <Image src={calender} alt="calender" />
+                      <p> 10 January 2023</p>
+                    </div>
 
-                  <h4>Bitcoin and Economic Freedom</h4>
-                  <Link href="#">Read More</Link>
+                    <h4>Bitcoin and Economic Freedom</h4>
+                    <Link href="#">Read More</Link>
+                  </div>
                 </div>
               </div>
-            </div>
+              <div>
+                <div className="blog-post-design">
+                  <div className="blog-image">
+                    <Image src={one} alt="bitcoin" />
+                  </div>
+                  <div className="blog-text">
+                    <div className="blog-time">
+                      <Image src={calender} alt="calender" />
+                      <p> 10 January 2023</p>
+                    </div>
+
+                    <h4>Bitcoin and Economic Freedom</h4>
+                    <Link href="#">Read More</Link>
+                  </div>
+                </div>
+              </div>
+            </Slider>
           </div>
         </div>
       </div>

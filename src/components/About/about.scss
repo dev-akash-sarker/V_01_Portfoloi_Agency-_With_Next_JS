@@ -8,6 +8,11 @@
             font-weight: 700 !important;
             color: $color-one;
             padding-right: 80px;
+            @include media-breakpoint-down(xs) {
+              font-size: 35px;
+              padding-right: 0;
+              margin-bottom: 10px;
+            }
             span {
               color: $primary-color;
             }
@@ -35,29 +40,60 @@
               left: 0px;
               border-radius: 20px;
               background-color: #6344c6;
+              @include media-breakpoint-down(xs) {
+                height: 110px;
+              }
+            }
+            @include media-breakpoint-down(xs) {
+              padding-right: 0;
+              text-align: justify;
             }
           }
 
-          button {
-            font-size: 20px;
-            font-weight: 700;
-            color: $color-white;
-            padding: 18px 32px;
-            margin-left: 15px;
-            margin-top: 23px;
-            border-color: transparent;
-            border-radius: 8px;
-            background-color: $primary-color;
+          .btn-wrapper {
+            button {
+              font-size: 20px;
+              font-weight: 700;
+              color: $color-white;
+              padding: 18px 32px;
+              margin-left: 15px;
+              margin-top: 23px;
+              border-color: transparent;
+              border-radius: 8px;
+              background-color: $primary-color;
+              @include media-breakpoint-down(xs) {
+                margin-left: 0;
+              }
+            }
+            @include media-breakpoint-down(xs) {
+              text-align: center;
+            }
           }
         }
 
         .rewards {
           margin-top: 64px;
+          @include media-breakpoint-down(xs) {
+            margin-top: 30px;
+            text-align: center;
+          }
           h3 {
             font-size: 32px;
             font-weight: 700;
             color: $color-one;
             padding-right: 280px;
+            @include media-breakpoint-down(md) {
+              font-size: 30px;
+              padding-right: 0px;
+            }
+            @include media-breakpoint-down(sm) {
+              font-size: 30px;
+              padding-right: 0px;
+            }
+            @include media-breakpoint-down(xs) {
+              font-size: 30px;
+              padding-right: 0px;
+            }
           }
 
           p {
@@ -67,6 +103,18 @@
             color: $footer-color;
             margin-bottom: 40px;
             padding-right: 200px;
+            @include media-breakpoint-down(md) {
+              padding-right: 0px;
+            }
+            @include media-breakpoint-down(sm) {
+              padding-right: 0px;
+            }
+            @include media-breakpoint-down(xs) {
+              font-size: 16px;
+              padding-right: 0px;
+              line-height: 25px;
+              margin-bottom: 20px;
+            }
           }
 
           button {
@@ -83,6 +131,64 @@
               color: #fff;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.skillset {
+  margin-top: 108px;
+  margin-bottom: 50px;
+  .container {
+    .row {
+      gap: 10px;
+      .clicked {
+        background-color: $primary-color;
+        h3 {
+          color: $color-white !important;
+        }
+
+        p {
+          color: $color-white !important;
+        }
+      }
+      .col-lg-5 {
+        padding: 22px;
+        border: 1px solid #c4c4c4;
+        border-radius: 8px;
+        transition: all linear 0.4s;
+        cursor: pointer;
+        // background-color: $primary-color;
+        h3 {
+          font-size: 18px;
+          font-weight: 700;
+          color: $color-one;
+          //   color: $color-white;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          color: #939393;
+          //   color: $color-white;
+          margin-bottom: 0 !important;
+        }
+
+        &:hover {
+          background-color: $primary-color;
+          h3 {
+            color: $color-white;
+          }
+
+          p {
+            color: $color-white;
+          }
+        }
+
+        &:nth-child(4) {
+          box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.1);
         }
       }
     }
