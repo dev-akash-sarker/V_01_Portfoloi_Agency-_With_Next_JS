@@ -1,5 +1,6 @@
 .navbar {
   background-color: transparent !important;
+
   .container {
     padding-top: 41px;
     padding-bottom: 49px;
@@ -23,4 +24,100 @@
     border-color: transparent;
     border-radius: 15px;
   }
+}
+
+// .stickynav {
+//   width: 100%;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   background-color: #fff;
+//   z-index: 9999;
+//   box-shadow: 0 4px 90px 0 rgba(0, 0, 0, 0.15);
+//   padding: 20px 0 !important;
+//   animation: scrollbar 0.5s;
+// }
+
+// @keyframes scrollbar {
+//   from {
+//     top: -80%;
+//   }
+//   to {
+//     top: 0;
+//   }
+// }
+
+.mobilemenu {
+  .responsive-bars {
+    cursor: pointer;
+  }
+  .nosidebar {
+    display: none;
+  }
+  .outsidefun {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 30%;
+    background-color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 99999;
+    transition: all linear 0.2s;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #fdfdfd;
+    z-index: 99999;
+    display: flex;
+    box-shadow: 0px -4px 30px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    transition: all linear 0.2s;
+    .crossme {
+      position: absolute;
+      top: 23px;
+      right: 57px;
+      cursor: pointer;
+    }
+    ul {
+      padding-left: 0 !important;
+      text-align: center;
+      li {
+        margin: 15px 0 !important;
+        a {
+          color: $color-one;
+          font-size: 18px;
+          font-weight: 500;
+
+          &:hover {
+            color: $primary-color;
+          }
+          &:focus {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    button {
+      background-color: $primary-color !important;
+      color: $color-white !important;
+      padding: 15px 29px;
+      font-weight: 700;
+      outline: none;
+      border-color: transparent;
+      border-radius: 15px;
+      margin-top: 25px;
+    }
+  }
+}
+
+.lock-scroll {
+  overflow: hidden;
 }

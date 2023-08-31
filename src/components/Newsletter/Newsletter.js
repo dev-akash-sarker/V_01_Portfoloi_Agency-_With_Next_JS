@@ -9,7 +9,7 @@ export default function Newsletter() {
       <div className="newsletter">
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 col-sm-12">
               <div className="newsletter-wrapper">
                 <div className="newsletter-text">
                   <h4 className={dmsans.className}>
@@ -28,10 +28,10 @@ export default function Newsletter() {
                         type="text"
                         placeholder="Email"
                       />
+                      <button>
+                        <BsArrowRight />
+                      </button>
                     </div>
-                    <button>
-                      <BsArrowRight />
-                    </button>
                   </div>
                 </div>
               </div>
