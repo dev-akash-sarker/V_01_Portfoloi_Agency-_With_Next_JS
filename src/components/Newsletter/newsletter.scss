@@ -11,10 +11,17 @@
         .newsletter-wrapper {
           display: flex !important;
           justify-content: space-between !important;
-          align-items: center !important;
+
           @include media-breakpoint-down(lg) {
             flex-direction: column;
             justify-content: flex-start;
+          }
+          @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          @include media-breakpoint-up(md) {
+            align-items: center !important;
           }
 
           .newsletter-text {
@@ -25,6 +32,13 @@
               font-weight: 700;
               line-height: auto;
               color: $color-white;
+              @include media-breakpoint-down(sm) {
+                font-size: 40px;
+                padding-right: 100px;
+              }
+              @include media-breakpoint-down(xs) {
+                font-size: 35px;
+              }
             }
 
             p {
@@ -38,9 +52,35 @@
 
           .newsletter-email {
             position: relative;
+            width: 434px;
+            @include media-breakpoint-down(xl) {
+              width: 400px;
+            }
+            @include media-breakpoint-down(lg) {
+              width: 410px;
+            }
+            @include media-breakpoint-down(sm) {
+              width: 350px;
+            }
 
             .newsletter-email-wrapper {
               position: relative;
+              button {
+                position: absolute;
+                top: 8px;
+                right: 4px;
+                color: $color-white;
+                background-color: $color-four;
+                font-weight: 700;
+                padding: 10px 16px;
+                border-radius: 8px;
+                z-index: 100;
+                svg {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
               input {
                 width: 434px;
                 padding: 14px 20px;
@@ -53,22 +93,15 @@
                 @include media-breakpoint-down(lg) {
                   width: 410px;
                 }
+                @include media-breakpoint-down(sm) {
+                  width: 350px;
+                }
                 // @include media-breakpoint-down(xs) {
                 //   width: 300px;
                 // }
                 &:focus {
                   outline: none;
                 }
-              }
-              button {
-                position: absolute;
-                top: 4px;
-                right: 4px;
-                color: $color-white;
-                background-color: $color-four;
-                font-weight: 700;
-                padding: 10px 16px;
-                border-radius: 8px;
               }
             }
           }
